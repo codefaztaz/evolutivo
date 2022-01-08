@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import TaskListComponent from './components/container/task_list';
+import ContactListComponent from './components/container/contact_list';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
        
-       <TaskListComponent></TaskListComponent>
+       {/* <TaskListComponent></TaskListComponent> */}
+       <ContactListComponent></ContactListComponent>
       </header>
     </div>
   );

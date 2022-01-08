@@ -10,14 +10,16 @@ const TaskComponent = ({ task }) => {
         </h2>
 
         <h3>
-        descripción: { task.description } </h3>
+        descripción: { task.description } 
+        </h3>
 
         <h4>
         level: { task.level } 
         </h4>
 
         <h5>
-        this task is: {} </h5>
+        this task is: {task.completed ? 'completed': 'pending'} 
+        </h5>
 
         </div>
     );
