@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-//import { Contact } from '../../models/contact.class';
+import { Contact } from '../../models/contact.class';
 
-const ContactComponent = (contact ) => {
+const ContactComponent = ({contact}) => {
 
 
     // const [conected, setconected] = useState(false);
@@ -13,6 +13,11 @@ const ContactComponent = (contact ) => {
        
     //     setconected(conected => !conected);
     // }
+
+   
+   
+
+ 
 
 
     return ( 
@@ -31,13 +36,9 @@ const ContactComponent = (contact ) => {
         </h4>
 
         <h5>
-        this state is: {contact.conected ? 'conectado': 'disponible'} 
+        this state is: {contact.conected ? 'disponible': 'no disponible'} 
         </h5>
-        {/* <div>
-                <button onClick={changeState}>
-                    cambiar estado conectado
-                </button>
-            </div> */}
+    
 
         </div>
     );
@@ -46,7 +47,7 @@ const ContactComponent = (contact ) => {
 
 
 ContactComponent.propTypes = {
-    conected: PropTypes.bool,
+    contact: PropTypes.instanceOf(Contact),
 
 }
 

@@ -4,7 +4,7 @@ export class Contact {
     name = '';
     surname = '';
     email = '';
-    conected = true;
+    conected = false;
    // level = LEVELS.NORMAL;
 
     constructor(name, surname, email, conected) {

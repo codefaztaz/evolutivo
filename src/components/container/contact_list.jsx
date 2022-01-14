@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 
-import { Contact } from '../../models/contact.class'
-//import { LEVELS } from '../../models/levels.enum'
-import ContactComponent from '../pure/contact'
+import { Contact } from '../../models/contact.class';
+//import { LEVELS } from '../../models/levels.enum';
+import ContactComponent from '../pure/contact';
 
 const ContactListComponent = () => {
 
@@ -16,8 +16,12 @@ const ContactListComponent = () => {
         console.log(conected);
        
         setconected(conected => !conected);
+        
     }
 
+    useEffect( () => {
+      document.conected = conected;
+    });
 
 
 
@@ -28,11 +32,11 @@ const ContactListComponent = () => {
                 your Contacts: 
             </div>
             <ContactComponent contact={defaultContact}></ContactComponent>
-            <div>
+             <div>
                 <button onClick={changeState}>
                     cambiar estado conectado
                 </button>
-            </div>
+            </div> 
           
         </div>
     )
